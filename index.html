@@ -66,36 +66,31 @@
             display: none;
         }
 
-        .countdown-toggle {
-            padding: 24px 16px;
+        .countdown-section {
+            padding: 10px 16px 24px;
             text-align: center;
         }
         
-        .countdown-toggle a {
+        .countdown-section iframe {
             display: block;
             width: 100%;
-            max-width: 500px;
-            box-sizing: border-box;
+            height: 300px;
             margin: 0 auto;
-            padding: 15px 20px;
-            border-radius: 10px;
-            background: #9c1826;
-            color: #fff;
+            border: 0;
+            overflow: hidden;
+        }
+        
+        .countdown-open-link {
+            display: inline-block;
+            margin-top: 4px;
+            color: #9c1826;
             font-family: Arial, sans-serif;
-            font-size: 17px;
-            font-weight: bold;
+            font-size: 14px;
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            transition: transform 0.15s ease, opacity 0.15s ease;
         }
         
-        .countdown-toggle a:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
-        }
-        
-        .countdown-toggle a:active {
-            transform: translateY(1px);
+        .countdown-open-link:hover {
+            text-decoration: underline;
         }
         
         @media (min-width: 768px) {
@@ -103,8 +98,11 @@
                 width: 50%;
                 max-width: 900px;
             }
-
             .calendar-section {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .countdown-section {
                 padding-left: 0;
                 padding-right: 0;
             }
@@ -168,6 +166,7 @@
     <iframe
         src="countdown.html"
         title="Đếm ngược đến đám cưới"
+        scrolling="no"
     ></iframe>
 
     <a class="countdown-open-link" href="countdown.html">
