@@ -66,67 +66,36 @@
             display: none;
         }
 
-        .countdown-section {
-            padding: 28px 16px;
+        .countdown-toggle {
+            padding: 24px 16px;
             text-align: center;
-            font-family: Arial, sans-serif;
-            color: #4f4035;
         }
         
-        .countdown-title {
-            margin-bottom: 18px;
-            font-size: 22px;
-            font-weight: bold;
-        }
-        
-        #countdown {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+        .countdown-toggle a {
+            display: block;
+            width: 100%;
             max-width: 500px;
+            box-sizing: border-box;
             margin: 0 auto;
-        }
-        
-        .countdown-item {
-            flex: 1;
-            max-width: 100px;
-            padding: 14px 8px;
-            background: #9c1826;
-            color: white;
+            padding: 15px 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-        
-        .countdown-item span {
-            display: block;
-            font-size: 28px;
+            background: #9c1826;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
             font-weight: bold;
-            line-height: 1.1;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.15s ease, opacity 0.15s ease;
         }
         
-        .countdown-item small {
-            display: block;
-            margin-top: 5px;
-            font-size: 12px;
+        .countdown-toggle a:hover {
             opacity: 0.9;
+            transform: translateY(-1px);
         }
         
-        @media (max-width: 400px) {
-            #countdown {
-                gap: 6px;
-            }
-        
-            .countdown-item {
-                padding: 12px 4px;
-            }
-        
-            .countdown-item span {
-                font-size: 23px;
-            }
-        
-            .countdown-item small {
-                font-size: 10px;
-            }
+        .countdown-toggle a:active {
+            transform: translateY(1px);
         }
         
         @media (min-width: 768px) {
@@ -147,6 +116,7 @@
         <img src="page01.webp" alt="">
         <img src="page02.webp" alt="">
         <img src="page03.webp" alt="">
+        <img src="page04.webp" alt="">
         <div class="calendar-section">
             <div class="android-only">
                 <a
@@ -191,31 +161,14 @@
                 </a>
             </div>
         </div>
-        <img src="page04.webp" alt="">
         <img src="page05.webp" alt="">
     </div>
 
-    <div class="countdown-section">
-        <div class="countdown-title">💍 Còn bao lâu nữa?</div>
-        <div id="countdown">
-            <div class="countdown-item">
-                <span id="days">0</span>
-                <small>Ngày</small>
-            </div>
-            <div class="countdown-item">
-                <span id="hours">0</span>
-                <small>Giờ</small>
-            </div>
-            <div class="countdown-item">
-                <span id="minutes">0</span>
-                <small>Phút</small>
-            </div>
-            <div class="countdown-item">
-                <span id="seconds">0</span>
-                <small>Giây</small>
-            </div>
-        </div>
-    </div>
+<div class="countdown-toggle">
+    <a href="countdown.html">
+        ⏳ Mở đếm ngược
+    </a>
+</div>
     
     <script>
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
