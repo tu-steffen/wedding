@@ -92,6 +92,51 @@
         .countdown-open-link:hover {
             text-decoration: underline;
         }
+
+        .location-section {
+            padding: 10px 16px 32px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .location-title {
+            margin: 0 0 8px;
+            color: #9c1826;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .location-address {
+            margin: 0 auto 14px;
+            max-width: 600px;
+            color: #333333;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .location-map {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            height: 320px;
+            margin: 0 auto;
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        .location-open-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #9c1826;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .location-open-link:hover {
+            text-decoration: underline;
+        }
         
         @media (min-width: 768px) {
             .invitation {
@@ -103,6 +148,10 @@
                 padding-right: 0;
             }
             .countdown-section {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .location-section {
                 padding-left: 0;
                 padding-right: 0;
             }
@@ -162,17 +211,43 @@
         <img src="page05.webp" alt="">
     </div>
 
-<div class="countdown-section">
-    <iframe
-        src="countdown.html"
-        title="Đếm ngược đến đám cưới"
-        scrolling="no"
-    ></iframe>
+    <div class="countdown-section">
+        <iframe
+            src="countdown.html"
+            title="Đếm ngược đến đám cưới"
+            scrolling="no"
+        ></iframe>
+    
+        <a class="countdown-open-link" href="countdown.html">
+            ⏱ Mở đếm ngược riêng
+        </a>
+    </div>
 
-    <a class="countdown-open-link" href="countdown.html">
-        ⏱ Mở đếm ngược riêng
-    </a>
-</div>
+    <div class="location-section">
+        <h2 class="location-title">📍 Địa điểm cưới</h2>
+        <p class="location-address">
+            CAPELLA GALLERY HALL<br>
+            24 Đường Ba Tháng Hai, phường Hòa Hưng,<br>
+            Thành phố Hồ Chí Minh, Vietnam
+        </p>
+
+        <iframe
+            class="location-map"
+            src="https://www.google.com/maps?q=CAPELLA+GALLERY+HALL,+24+Đường+Ba+Tháng+Hai,+Hồ+Chí+Minh,+Vietnam&output=embed"
+            title="Bản đồ CAPELLA GALLERY HALL"
+            loading="lazy"
+            allowfullscreen
+        ></iframe>
+
+        <a
+            class="location-open-link"
+            href="https://www.google.com/maps/search/?api=1&query=CAPELLA+GALLERY+HALL,+24+Đường+Ba+Tháng+Hai,+Hồ+Chí+Minh,+Vietnam"
+            target="_blank"
+            rel="noopener"
+        >
+            🗺️ Mở trong Google Maps
+        </a>
+    </div>
     
     <script>
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
