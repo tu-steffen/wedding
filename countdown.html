@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đám cưới - Tú & Steffen</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+            color: #4f4035;
+        }
+
+        .countdown {
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px 16px;
+            text-align: center;
+        }
+
+        .title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+
+        #timer {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .item {
+            flex: 1;
+            max-width: 90px;
+            padding: 14px 6px;
+            background: #9c1826;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .number {
+            display: block;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .label {
+            display: block;
+            margin-top: 5px;
+            font-size: 11px;
+        }
+
+        .back {
+            margin-top: 30px;
+            color: #9c1826;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 400px) {
+            .item {
+                padding: 12px 4px;
+            }
+
+            .number {
+                font-size: 23px;
+            }
+
+            .label {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="countdown">
+        <div class="title">💍 Còn bao lâu nữa?</div>
+        <div class="subtitle">Đám cưới - Tú & Steffen</div>
+
+        <div id="timer">
+            <div class="item">
+                <span class="number" id="days">0</span>
+                <span class="label">Ngày</span>
+            </div>
+            <div class="item">
+                <span class="number" id="hours">00</span>
+                <span class="label">Giờ</span>
+            </div>
+            <div class="item">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Phút</span>
+            </div>
+            <div class="item">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Giây</span>
+            </div>
+        </div>
+
+        <a class="back" href="index.html">
+            ← Quay lại thiệp cưới
+        </a>
+    </div>
+
+    <script>
+        const weddingDate = new Date('2026-11-01T11:00:00+07:00').getTime();
+
+        function updateCountdown() {
+            const distance = weddingDate - Date.now();
+
+            if (distance <= 0) {
+                document.getElementById('timer').innerHTML =
+                    '<div class="title">🎉 Hôm nay là ngày cưới!</div>';
+                return;
+            }
+
+            document.getElementById('days').textContent =
+                Math.floor(distance / 86400000);
+
+            document.getElementById('hours').textContent =
+                String(Math.floor(distance / 3600000) % 24).padStart(2, '0');
+
+            document.getElementById('minutes').textContent =
+                String(Math.floor(distance / 60000) % 60).padStart(2, '0');
+
+            document.getElementById('seconds').textContent =
+                String(Math.floor(distance / 1000) % 60).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
