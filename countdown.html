@@ -9,18 +9,18 @@
         html,
         body {
             margin: 0;
-            min-height: 100%;
+            padding: 0;
+            width: 100%;
             background: #ffffff;
             font-family: Arial, sans-serif;
             color: #4f4035;
+            overflow: hidden;
         }
-
+        
         .countdown {
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 240px;
+            width: 100%;
+            min-height: 280px;
             padding: 20px 16px;
             text-align: center;
         }
@@ -41,12 +41,15 @@
             justify-content: center;
             gap: 8px;
             width: 100%;
+            box-sizing: border-box;
         }
-
+        
         .item {
-            flex: 1;
+            flex: 1 1 0;
+            min-width: 0;
             max-width: 90px;
             padding: 14px 6px;
+            box-sizing: border-box;
             background: #9c1826;
             color: #fff;
             border-radius: 10px;
@@ -73,14 +76,22 @@
         }
 
         @media (max-width: 400px) {
-            .item {
-                padding: 12px 4px;
+            .countdown {
+                padding: 18px 10px;
             }
-
+        
+            #timer {
+                gap: 5px;
+            }
+        
+            .item {
+                padding: 12px 3px;
+            }
+        
             .number {
                 font-size: 23px;
             }
-
+        
             .label {
                 font-size: 10px;
             }
