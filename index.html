@@ -2,8 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Steffen & Tu – Hochzeit</title>
 
@@ -13,22 +12,89 @@
             background: #f8f5f0;
         }
 
+        /* Main content */
+        .invitation {
+            width: 100%;
+            margin: 0 auto;
+        }
+
         img {
             display: block;
             width: 100%;
             height: auto;
+        }
+
+        /* Calendar button */
+        .calendar-button {
+            display: block;
+            width: calc(100% - 32px);
+            max-width: 500px;
+            margin: 24px auto;
+            padding: 16px 20px;
+            box-sizing: border-box;
+
+            background: #6b4f3a;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+            transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+
+        .calendar-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .calendar-button:active {
+            transform: translateY(1px);
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+            .invitation {
+                width: 50%;
+                max-width: 900px;
+            }
+
+            .calendar-button {
+                width: 50%;
+                max-width: 450px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <img src="page01.webp" alt="">
-    <img src="page02.webp" alt="">
-    <img src="page03.webp" alt="">
-    <img src="page04.webp" alt="">
-    <img src="page05.webp" alt="">
-    <img src="page06.webp" alt="">
+    <div class="invitation">
+
+        <!-- Calendar button -->
+        <a class="calendar-button" href="wedding.ics">
+            📅 Zum Kalender hinzufügen
+        </a>
+
+        <img src="page01.webp" alt="">
+        <img src="page02.webp" alt="">
+        <img src="page03.webp" alt="">
+        
+        <!-- Calendar button can also be placed here -->
+        <a class="calendar-button" href="wedding.ics">
+            📅 01. November 2026 zum Kalender hinzufügen
+        </a>
+
+        <img src="page04.webp" alt="">
+        <img src="page05.webp" alt="">
+        <img src="page06.webp" alt="">
+
+    </div>
 
 </body>
 </html>
