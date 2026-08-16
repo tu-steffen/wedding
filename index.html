@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Steffen & Tu – Wedding 2026</title>
+    <title>Steffen & Tu – Hochzeit</title>
 
     <style>
         body {
             margin: 0;
-            background: #ffffff;
+            background: #f8f5f0;
         }
 
-        /* Main content */
         .invitation {
             width: 100%;
             margin: 0 auto;
@@ -24,28 +23,47 @@
             height: auto;
         }
 
-        /* Calendar button */
+        /* Calendar section */
+        .calendar-section {
+            padding: 24px 16px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .calendar-title {
+            margin: 0 0 16px 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #4f4035;
+        }
+
         .calendar-button {
             display: block;
-            width: calc(100% - 32px);
+            width: 100%;
             max-width: 500px;
-            margin: 24px auto;
-            padding: 16px 20px;
             box-sizing: border-box;
 
-            background: #6b4f3a;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-            font-weight: bold;
+            margin: 10px auto;
+            padding: 15px 20px;
 
             border-radius: 10px;
+            border: none;
+
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+
+            cursor: pointer;
+
+            background: #9c1826;
+            color: white;
+
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
-            transition: transform 0.15s ease, opacity 0.15s ease;
+            transition:
+                transform 0.15s ease,
+                opacity 0.15s ease;
         }
 
         .calendar-button:hover {
@@ -57,6 +75,17 @@
             transform: translateY(1px);
         }
 
+        .calendar-button.secondary {
+            background: #8d796b;
+        }
+
+        /* Hide platform-specific buttons initially */
+        .android-only,
+        .apple-only,
+        .desktop-only {
+            display: none;
+        }
+
         /* Desktop */
         @media (min-width: 768px) {
             .invitation {
@@ -64,9 +93,9 @@
                 max-width: 900px;
             }
 
-            .calendar-button {
-                width: 50%;
-                max-width: 450px;
+            .calendar-section {
+                padding-left: 0;
+                padding-right: 0;
             }
         }
     </style>
@@ -79,17 +108,97 @@
         <img src="page01.webp" alt="">
         <img src="page02.webp" alt="">
         <img src="page03.webp" alt="">
-        
-        <!-- Calendar button can also be placed here -->
-        <a class="calendar-button" href="wedding.ics">
-            📅 Add Wedding to Calendar
-        </a>
+
+        <!-- Calendar -->
+        <div class="calendar-section">
+
+            <div class="calendar-title">
+                📅 Save Event to Calendar
+            </div>
+
+            <!-- Android -->
+            <div class="android-only">
+                <a
+                    class="calendar-button"
+                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=20261101T040000Z%2F20261101T130000Z&stz=Asia%2FHo_Chi_Minh&etz=Asia%2FHo_Chi_Minh&text=Wedding%20%28Party%29%20%E2%80%93%20Steffen%20%26%20Tu&details=Wedding%20celebration%20of%20Steffen%20%26%20Tu.&location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    📅 Add to Google Calendar
+                </a>
+
+                <a
+                    class="calendar-button secondary"
+                    href="wedding.ics"
+                    download
+                >
+                    📄 Download Event (.ics)
+                </a>
+            </div>
+
+            <!-- iPhone / iPad -->
+            <div class="apple-only">
+                <a
+                    class="calendar-button"
+                    href="wedding.ics"
+                >
+                    📅 Add to Apple Calendar
+                </a>
+
+                <a
+                    class="calendar-button secondary"
+                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=20261101T040000Z%2F20261101T130000Z&stz=Asia%2FHo_Chi_Minh&etz=Asia%2FHo_Chi_Minh&text=Wedding%20%28Party%29%20%E2%80%93%20Steffen%20%26%20Tu&details=Wedding%20celebration%20of%20Steffen%20%26%20Tu.&location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    📅 Add to Google Calendar
+                </a>
+            </div>
+
+            <!-- Desktop -->
+            <div class="desktop-only">
+
+                <a
+                    class="calendar-button"
+                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=20261101T040000Z%2F20261101T130000Z&stz=Asia%2FHo_Chi_Minh&etz=Asia%2FHo_Chi_Minh&text=Wedding%20%28Party%29%20%E2%80%93%20Steffen%20%26%20Tu&details=Wedding%20celebration%20of%20Steffen%20%26%20Tu.&location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    📅 Add to Google Calendar
+                </a>
+
+                <a
+                    class="calendar-button secondary"
+                    href="wedding.ics"
+                    download
+                >
+                    📄 Download Event (.ics)
+                </a>
+
+            </div>
+
+        </div>
 
         <img src="page04.webp" alt="">
         <img src="page05.webp" alt="">
         <img src="page06.webp" alt="">
 
     </div>
+
+    <script>
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        const isAndroid = /Android/i.test(userAgent);
+        const isApple = /iPhone|iPad|iPod/i.test(userAgent);
+
+        if (isAndroid) {
+            document.querySelector('.android-only').style.display = 'block';
+        } else if (isApple) {
+            document.querySelector('.apple-only').style.display = 'block';
+        } else {
+            document.querySelector('.desktop-only').style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
