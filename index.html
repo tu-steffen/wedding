@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Tu & Steffen – Wedding 2026</title>
-
+    <title>Đám cưới - Tú & Steffen 2026</title>
     <style>
         body {
             margin: 0;
@@ -23,18 +21,10 @@
             height: auto;
         }
 
-        /* Calendar section */
         .calendar-section {
             padding: 24px 16px;
             text-align: center;
             font-family: Arial, sans-serif;
-        }
-
-        .calendar-title {
-            margin: 0 0 16px 0;
-            font-size: 20px;
-            font-weight: bold;
-            color: #4f4035;
         }
 
         .calendar-button {
@@ -42,28 +32,19 @@
             width: 100%;
             max-width: 500px;
             box-sizing: border-box;
-
             margin: 10px auto;
             padding: 15px 20px;
-
             border-radius: 10px;
             border: none;
-
             font-size: 17px;
             font-weight: bold;
             text-decoration: none;
             text-align: center;
-
             cursor: pointer;
-
             background: #9c1826;
             color: white;
-
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
-            transition:
-                transform 0.15s ease,
-                opacity 0.15s ease;
+            transition: transform 0.15s ease, opacity 0.15s ease;
         }
 
         .calendar-button:hover {
@@ -79,14 +60,12 @@
             background: #9c1826bd;
         }
 
-        /* Hide platform-specific buttons initially */
         .android-only,
         .apple-only,
         .desktop-only {
             display: none;
         }
 
-        /* Desktop */
         @media (min-width: 768px) {
             .invitation {
                 width: 50%;
@@ -100,87 +79,64 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="invitation">
-
         <img src="page01.webp" alt="">
         <img src="page02.webp" alt="">
         <img src="page03.webp" alt="">
         <img src="page04.webp" alt="">
-        <!-- Calendar -->
+
         <div class="calendar-section">
-            <!-- Android -->
             <div class="android-only">
                 <a
                     class="calendar-button"
-                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=20261101T040000Z%2F20261101T130000Z&stz=Asia%2FHo_Chi_Minh&etz=Asia%2FHo_Chi_Minh&text=Wedding%20%28Party%29%20%E2%80%93%20Steffen%20%26%20Tu&details=Wedding%20celebration%20of%20Steffen%20%26%20Tu.&location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
+                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&amp;dates=20261101T040000Z%2F20261101T130000Z&amp;stz=Asia%2FHo_Chi_Minh&amp;etz=Asia%2FHo_Chi_Minh&amp;text=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20-%20T%C3%BA%20%26%20Steffen&amp;details=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20c%E1%BB%A7a%20T%C3%BA%20%26%20Steffen.&amp;location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
                     target="_blank"
                     rel="noopener"
-                >
-                    📅 Add to Google Calendar
-                </a>
+                >📅 Thêm vào lịch - Google</a>
 
-                <a
-                    class="calendar-button secondary"
-                    href="wedding.ics"
-                    download
-                >
-                    📄 Download Event (.ics)
+                <a class="calendar-button secondary" href="wedding.ics" download>
+                    📄 Tải file lịch (.ics)
                 </a>
             </div>
 
-            <!-- iPhone / iPad -->
             <div class="apple-only">
+                <a class="calendar-button" href="wedding.ics">
+                    📅 Thêm vào lịch - Apple
+                </a>
+
                 <a
                     class="calendar-button"
-                    href="wedding.ics"
-                >
-                    📅 Add to Apple Calendar
-                </a>
-
-                <a
-                    class="calendar-button secondary"
-                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=20261101T040000Z%2F20261101T130000Z&stz=Asia%2FHo_Chi_Minh&etz=Asia%2FHo_Chi_Minh&text=Wedding%20%28Party%29%20%E2%80%93%20Steffen%20%26%20Tu&details=Wedding%20celebration%20of%20Steffen%20%26%20Tu.&location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
+                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&amp;dates=20261101T040000Z%2F20261101T130000Z&amp;stz=Asia%2FHo_Chi_Minh&amp;etz=Asia%2FHo_Chi_Minh&amp;text=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20-%20T%C3%BA%20%26%20Steffen&amp;details=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20c%E1%BB%A7a%20T%C3%BA%20%26%20Steffen.&amp;location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
                     target="_blank"
                     rel="noopener"
-                >
-                    📅 Add to Google Calendar
-                </a>
+                >📅 Thêm vào lịch - Google</a>
             </div>
 
-            <!-- Desktop -->
             <div class="desktop-only">
+                <a class="calendar-button" href="wedding.ics">
+                    📅 Thêm vào lịch - Apple
+                </a>
 
                 <a
                     class="calendar-button"
-                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=20261101T040000Z%2F20261101T130000Z&stz=Asia%2FHo_Chi_Minh&etz=Asia%2FHo_Chi_Minh&text=Wedding%20%28Party%29%20%E2%80%93%20Steffen%20%26%20Tu&details=Wedding%20celebration%20of%20Steffen%20%26%20Tu.&location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
+                    href="https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&amp;dates=20261101T040000Z%2F20261101T130000Z&amp;stz=Asia%2FHo_Chi_Minh&amp;etz=Asia%2FHo_Chi_Minh&amp;text=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20-%20T%C3%BA%20%26%20Steffen&amp;details=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20c%E1%BB%A7a%20T%C3%BA%20%26%20Steffen.&amp;location=CAPELLA%20GALLERY%20HALL%2C%2024%203%20Th%C3%A1ng%202%2C%20H%C3%B2a%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000%2C%20Vietnam"
                     target="_blank"
                     rel="noopener"
-                >
-                    📅 Add to Google Calendar
-                </a>
+                >📅 Thêm vào lịch - Google</a>
 
-                <a
-                    class="calendar-button secondary"
-                    href="wedding.ics"
-                    download
-                >
-                    📄 Download Event (.ics)
+                <a class="calendar-button secondary" href="wedding.ics" download>
+                    📄 Tải file lịch (.ics)
                 </a>
-
             </div>
-
         </div>
+
         <img src="page05.webp" alt="">
         <img src="page06.webp" alt="">
-
     </div>
 
     <script>
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
         const isAndroid = /Android/i.test(userAgent);
         const isApple = /iPhone|iPad|iPod/i.test(userAgent);
 
@@ -192,6 +148,5 @@
             document.querySelector('.desktop-only').style.display = 'block';
         }
     </script>
-
 </body>
 </html>
