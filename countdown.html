@@ -147,24 +147,32 @@
             document.getElementById('seconds').textContent =
                 String(Math.floor(distance / 1000) % 60).padStart(2, '0');
         }
-
         updateCountdown();
         setInterval(updateCountdown, 1000);
         
+        let lastWidth = window.innerWidth;
+        let lastHeight = 0;
         function sendHeight() {
             const height = document.documentElement.scrollHeight + 8;
-    
+            if (height === lastHeight && window.innerWidth === lastWidth) {
+                return;
+            }
+            lastWidth = window.innerWidth;
+            lastHeight = height;
             window.parent.postMessage({
                 type: 'countdownHeight',
                 height: height
             }, '*');
         }
-    
-        window.addEventListener('load', sendHeight);
-        window.addEventListener('resize', sendHeight);
-    
-        setTimeout(sendHeight, 100);
-        setTimeout(sendHeight, 500);
+        window.addEventListener('load', function () {
+            sendHeight();
+            setTimeout(sendHeight, 300);
+        });
+        window.addEventListener('resize', function () {
+            if (window.innerWidth !== lastWidth) {
+                sendHeight();
+            }
+        });
     </script>
 </body>
 </html>
