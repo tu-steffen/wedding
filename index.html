@@ -28,6 +28,33 @@
             font-family: Arial, sans-serif;
         }
 
+        .side-decoration {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: min(24vw, 420px);
+            max-height: 80vh;
+            height: auto;
+            object-fit: contain;
+            opacity: 0.16;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .side-decoration-left {
+            left: 1vw;
+        }
+        
+        .side-decoration-right {
+            right: 1vw;
+        }
+        
+        .invitation,
+        .location-section {
+            position: relative;
+            z-index: 1;
+        }
+
         .calendar-button {
             display: block;
             width: 100%;
@@ -125,7 +152,7 @@
             text-decoration: underline;
         }
         
-        @media (min-width: 768px) {
+        @media (min-width: 1000px) {
             .invitation {
                 width: 50%;
                 max-width: 900px;
@@ -141,6 +168,9 @@
             .location-section {
                 padding-left: 0;
                 padding-right: 0;
+            }
+            .side-decoration {
+                display: none;
             }
         }
     </style>
@@ -245,4 +275,12 @@
         }
     </script>
 </body>
+
+<img class="side-decoration side-decoration-left"
+     src="phoenix.png"
+     alt="">
+<img class="side-decoration side-decoration-right"
+     src="dragon.png"
+     alt="">
+
 </html>
