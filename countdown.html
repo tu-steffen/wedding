@@ -19,8 +19,7 @@
         .countdown {
             box-sizing: border-box;
             width: 100%;
-            min-height: 280px;
-            padding: 20px 16px;
+            padding: 20px 16px 24px;
             text-align: center;
         }
 
@@ -153,26 +152,29 @@
         let lastWidth = window.innerWidth;
         let lastHeight = 0;
         function sendHeight() {
-            const height = document.documentElement.scrollHeight + 8;
-            if (height === lastHeight && window.innerWidth === lastWidth) {
+            const countdown = document.querySelector('.countdown');
+    
+            if (!countdown) {
                 return;
             }
-            lastWidth = window.innerWidth;
-            lastHeight = height;
+    
+            const height = Math.ceil(
+                countdown.getBoundingClientRect().height
+            ) + 8;
+    
             window.parent.postMessage({
                 type: 'countdownHeight',
                 height: height
             }, '*');
         }
+    
         window.addEventListener('load', function () {
             sendHeight();
+    
             setTimeout(sendHeight, 300);
         });
-        window.addEventListener('resize', function () {
-            if (window.innerWidth !== lastWidth) {
-                sendHeight();
-            }
-        });
+    
+        window.addEventListener('resize', sendHeight);
     </script>
 </body>
 </html>
